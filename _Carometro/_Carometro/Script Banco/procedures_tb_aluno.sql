@@ -1,0 +1,7 @@
+DELIMITER $$ /*PARA EXECUTAR APROCEDURE, O DELIMITADOR É $$*/
+CREATE PROCEDURE p_consultaAlunoAtivo() NO SQL/*NO SQL SIGNIFICA QUE DENTRO DO PARETESES NÃO TEM PARAMETRO*/
+BEGIN
+    SELECT * FROM tb_aluno WHERE StatusAlu=0 ORDER BY Nome;
+END$$
+DELIMITER; /*DELIMETER NO PADRÃO*/
+/*Seleciona todos os campos com o statusAlu=0 (Alunos ativos)*/
